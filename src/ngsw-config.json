@@ -1,0 +1,22 @@
+{
+    "index": "/index.html",
+    "assetGroups": [
+      {
+        "name": "brotherVsBrother",
+        "installMode": "prefetch",
+        "resources": {
+          "versionedFiles": ["/*.bundle.css", "/*.bundle.js", "/*.chunk.js"],
+          "urls": ["https://fonts.googleapis.com/icon?family=Material+Icons"]
+        }
+      },
+      {
+        "name": "assets",
+        "installMode": "lazy",
+        "updateMode": "lazy",
+        "resources": {
+          "files": ["/assets/**/*"]
+        }
+      }
+    ]
+  }
+  
