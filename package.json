@@ -7,6 +7,7 @@
         "start.prod": "npm run build.prod && http-server ./dist/brother-vs-brother/ -p 8080",
         "build": "ng build",
         "build.prod": "ng build --prod",
+        "prebuild.prod": " ng test --watch=false && ng e2e --watch=false",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",

@@ -36,8 +36,7 @@ jobs:
                       - node_modules
                   key: v2-dependencies-{{ checksum "package.json" }}
 
-            - run: npm run test
-            - run: npm run e2e
+            - run: npm run prebuild.prod
             - run: npm run build.prod
             - run:
                   name: AWS deploy
