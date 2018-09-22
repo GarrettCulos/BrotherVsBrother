@@ -1,0 +1,31 @@
+@import '../../../styles/abstract/variables';
+
+.header {
+    background-color: $black;
+    color: $white;
+
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    & .title {
+        display: block;
+        margin: 0;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    & .description {
+        display: block;
+        margin: 0;
+
+        font-weight: 300;
+    }
+}

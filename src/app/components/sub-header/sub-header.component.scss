@@ -1,0 +1,69 @@
+@import '../../../styles/abstract/variables';
+
+.sub-header {
+    position: sticky;
+    top: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $black-light;
+    color: $white;
+}
+
+.person-container {
+    display: flex;
+    justify-content: center;
+
+    .person {
+        min-height: 80px;
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            background-color: white;
+        }
+
+        &__name {
+            font-weight: 300;
+            font-size: 1.4rem;
+        }
+        &__total-distance,
+        &__weekly-distance {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        &:first-child {
+            margin-left: 1rem;
+            padding-left: 100px;
+            align-items: flex-start;
+        }
+        &:first-child .person__icon {
+            position: absolute;
+            left: 0;
+        }
+
+        &:last-child {
+            margin-right: 1rem;
+            padding-right: 100px;
+            align-items: flex-end;
+        }
+        &:last-child .person__icon {
+            position: absolute;
+            right: 0;
+        }
+    }
+}

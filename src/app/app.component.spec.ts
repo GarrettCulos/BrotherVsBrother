@@ -11,9 +11,4 @@ describe('AppComponent', () => {
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     }));
-    it(`should have as title 'brother-vs-brother'`, async(() => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.debugElement.componentInstance;
-        expect(app.title).toEqual('brother-vs-brother');
-    }));
 });

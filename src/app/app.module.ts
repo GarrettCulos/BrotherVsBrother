@@ -29,6 +29,7 @@ import { RunDetailsComponent } from './components/run-details/run-details.compon
 
 import { RequestService } from './services/request.service';
 import { StravaService } from './services/strava.service';
+import { SubHeaderComponent } from './components/sub-header/sub-header.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { StravaService } from './services/strava.service';
         BrotherInfoComponent,
         BrotherInfoImageComponent,
         RunInstanceComponent,
-        RunDetailsComponent
+        RunDetailsComponent,
+        SubHeaderComponent
     ],
     imports: [
         BrowserModule,
