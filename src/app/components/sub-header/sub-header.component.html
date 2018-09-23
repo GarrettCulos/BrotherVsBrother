@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class="person-container">
       <div class="person" *ngFor="let person of people">
-        <div class="person__icon"></div>
+        <img class="person__icon" [src]="person.image" />
         <div class="person__name"> {{person.name}} </div>
         <div class="person__weekly-distance"> Week: {{person.weeksDistance}}{{person.weeksDistanceUnits}} </div>
         <div class="person__total-distance"> Total: {{person.totalDistance}}{{person.totalDistanceUnits}} </div>
