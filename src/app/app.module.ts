@@ -22,26 +22,15 @@ if (!environment.production) {
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BrotherInfoComponent } from './components/brother-info/brother-info.component';
-import { BrotherInfoImageComponent } from './components/brother-info-image/brother-info-image.component';
-import { RunInstanceComponent } from './components/run-instance/run-instance.component';
-import { RunDetailsComponent } from './components/run-details/run-details.component';
 
 import { RequestService } from './services/request.service';
 import { StravaService } from './services/strava.service';
 import { SubHeaderComponent } from './components/sub-header/sub-header.component';
+import { ActivityComponent } from './components/activity/activity.component';
+import { ActivityTimelineComponent } from './components/activity-timeline/activity-timeline.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HeaderComponent,
-        FooterComponent,
-        BrotherInfoComponent,
-        BrotherInfoImageComponent,
-        RunInstanceComponent,
-        RunDetailsComponent,
-        SubHeaderComponent
-    ],
+    declarations: [AppComponent, HeaderComponent, FooterComponent, SubHeaderComponent, ActivityComponent, ActivityTimelineComponent],
     imports: [
         BrowserModule,
         ServiceWorkerModule,

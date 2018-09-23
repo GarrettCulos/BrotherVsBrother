@@ -1,12 +1,18 @@
 import { ActionReducer, ActionReducerMap } from '@ngrx/store';
 import { storeLogger } from 'ngrx-store-logger';
 
-export const appReducers: ActionReducerMap<any> = {};
+import { UIState, uiInitialState, uiReducer } from './ui/ui.reducers';
 
-export const initialState = {};
+export const appReducers: ActionReducerMap<any> = {
+    ui: uiReducer
+};
+
+export const initialState = {
+    ui: uiInitialState
+};
 
 export interface AppState {
-    test: null;
+    ui: UIState;
 }
 
 export const appEffects: any[] = [];
