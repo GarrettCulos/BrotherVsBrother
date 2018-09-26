@@ -35,7 +35,7 @@
         "precommit": "^1.2.2",
         "prettier": "^1.14.3",
         "pretty-quick": "^1.7.0",
-        "rxjs": "~6.2.0",
+        "rxjs": "^6.2.2",
         "zone.js": "~0.8.26"
     },
     "precommit": [

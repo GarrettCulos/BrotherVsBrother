@@ -1,0 +1,58 @@
+@import '../../../styles/abstract/variables';
+.activity {
+    margin-bottom: 10px;
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+    &__date {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    &__distance {
+        font-size: 1rem;
+        font-weight: 300;
+        color: $black-text-lighter;
+    }
+}
+
+.timeline-activities {
+    // &__connector {
+    //     position: absolute;
+    //     width: 50%;
+    //     top: 50%;
+    //     right: 0;
+    //     border-bottom: 1px solid rgba(red, 0.5);
+    // }
+    &__marker,
+    &__marker--small {
+        border: 14px solid rgb(182, 27, 27);
+        position: absolute;
+        right: calc(50% - 14px);
+        opacity: 0.6;
+        border-radius: 50%;
+    }
+    &__marker--small {
+        border-width: 6px;
+        border-color: rgb(133, 3, 3);
+        margin-top: 8px;
+        right: calc(50% - 6px);
+    }
+}
+.timeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.timeline-bar {
+    position: absolute;
+    right: calc(50% - 2px);
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    background-color: rgba(red, 0.8);
+    border-radius: 2px;
+}
