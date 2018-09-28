@@ -4,6 +4,7 @@
 
 export const environment = {
     production: false,
+    enableProxy: true,
     stravaApiProxy: 'https://kaasj1m63f.execute-api.us-west-2.amazonaws.com/production'
 };
 

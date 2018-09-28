@@ -1,3 +1,3 @@
-import { PersonState } from './person.reducers';
+import { AppState } from '..';
 
-export const getPersons = (state: PersonState) => state.personByIds.map(id => state.personHash[id]);
+export const getPersons = () => (state: AppState) => state.person.personByIds.map(id => state.person.personHash[id]);

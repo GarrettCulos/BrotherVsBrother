@@ -1,3 +1,5 @@
+import { Activity } from './activity.type';
+
 export class Person {
     id: string;
     image: string;
@@ -6,4 +8,8 @@ export class Person {
     weeksDistance: number;
     totalDistanceUnits: string;
     weeksDistanceUnits: string;
+}
+
+export class PersonWithActivities extends Person {
+    activities: Activity[];
 }

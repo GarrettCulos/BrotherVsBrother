@@ -1,17 +1,20 @@
-<div class="timeline-container">
-  <div class="page-container">
+<bvb-activity-header [people]="people"></bvb-activity-header>
+<div class="page-container">
+  <div class="timeline-container">
     <div class="timeline-bar"></div>
-    <div *ngIf="activityFeedHeight" class="timeline-activities" [ngStyle]="{'height.px': activityFeedHeight}">
-      <ng-container *ngFor="let activity of activities">
-        <div class="activity">
-          <span class="timeline-activities__connector"></span>
-          <span class="timeline-activities__marker" [ngStyle]="{'top.px': activity.windowPosition}"></span>
-          <span class="timeline-activities__marker--small" [ngStyle]="{'top.px': activity.windowPosition}"></span>
-          <div class="activity__name">{{activity.name}}</div>
-          <div class="activity__date">{{activity.start_date | date:'dd - MM - yyyy'}}</div>
-          <div class="activity__distance">{{activity.distance / 1000}} km</div>
-        </div>
-      </ng-container>
-    </div>
+    <ng-container *ngFor="let person of people">
+      <div *ngIf="activityFeedHeight" class="timeline-activities" [ngStyle]="{'height.px': activityFeedHeight}">
+        <ng-container *ngFor="let activity of person.activities">
+          <div class="activity">
+            <span class="timeline-activities__connector"></span>
+            <span class="timeline-activities__marker" [ngStyle]="{'top.px': activity.windowPosition}"></span>
+            <span class="timeline-activities__marker--small" [ngStyle]="{'top.px': activity.windowPosition}"></span>
+            <div class="activity__name">{{activity.name}}</div>
+            <div class="activity__date">{{activity.start_date | date:'dd - MM - yyyy'}}</div>
+            <div class="activity__distance">{{activity.distance / 1000}} km</div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
   </div>
 </div>

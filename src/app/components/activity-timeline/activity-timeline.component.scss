@@ -1,4 +1,8 @@
 @import '../../../styles/abstract/variables';
+
+$blueColor: rgb(27, 27, 182);
+$redColor: rgb(182, 27, 27);
+
 .activity {
     margin-bottom: 10px;
 
@@ -15,29 +19,59 @@
         font-weight: 300;
         color: $black-text-lighter;
     }
+    &:hover .timeline-activities {
+        &__marker {
+            transition: all 0.25s ease-in-out;
+            opacity: 0;
+            &--small {
+                opacity: 1;
+                display: initial;
+                transition: all 0.125s ease-in-out;
+                box-shadow: 0 0 8px 8px rgba($redColor, 0.5);
+            }
+        }
+    }
 }
-
+.timeline-activities:last-child {
+    .activity:hover {
+        .timeline-activities__marker {
+            &--small {
+                box-shadow: 0 0 8px 8px rgba($blueColor, 0.5);
+            }
+        }
+    }
+}
 .timeline-activities {
-    // &__connector {
-    //     position: absolute;
-    //     width: 50%;
-    //     top: 50%;
-    //     right: 0;
-    //     border-bottom: 1px solid rgba(red, 0.5);
-    // }
+    width: 50%;
+    &:last-child {
+        text-align: right;
+    }
+
+    &:last-child #{&}__marker {
+        border-color: $blueColor;
+        left: 50%;
+    }
+    &:last-child #{&}__marker--small {
+        border-color: $blueColor;
+        left: calc(50% + 8px);
+    }
+
     &__marker,
     &__marker--small {
-        border: 14px solid rgb(182, 27, 27);
+        transition: all 0.125s ease-in-out;
+        border: 14px solid $redColor;
         position: absolute;
-        right: calc(50% - 14px);
+        right: 50%;
         opacity: 0.6;
         border-radius: 50%;
     }
     &__marker--small {
+        transition: all 0.25s ease-in-out;
+        opacity: 1;
         border-width: 6px;
-        border-color: rgb(133, 3, 3);
+        border-color: $redColor;
         margin-top: 8px;
-        right: calc(50% - 6px);
+        right: calc(50% + 8px);
     }
 }
 .timeline-container {
@@ -53,6 +87,6 @@
     bottom: 0;
     width: 3px;
     height: 100%;
-    background-color: rgba(red, 0.8);
+    background-color: rgba($redColor, 0.8);
     border-radius: 2px;
 }

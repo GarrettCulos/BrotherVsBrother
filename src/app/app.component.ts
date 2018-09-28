@@ -30,6 +30,7 @@ export class AppComponent {
         weeksDistance: 30.7,
         weeksDistanceUnits: 'km'
     };
+
     constructor(private store: Store<AppState>) {
         this.store.dispatch(new PersonActions.AddPerson(this.tonyPerson));
         this.store.dispatch(new PersonActions.AddPerson(this.garrettPerson));
