@@ -1,0 +1,17 @@
+@import '../../../styles/abstract/variables';
+
+.button {
+    margin-top: 1rem;
+    padding: 8px 24px;
+    border-radius: 2rem;
+    color: $white;
+    background-color: $black-light;
+    border: 1px solid rgba($red, 0.6);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &:hover {
+        border-color: rgba($red, 0.8);
+    }
+}

@@ -7,7 +7,7 @@ import { RequestService } from './request.service';
 export class StravaService {
     constructor(private req: RequestService) {}
     getActivities(userId) {
-        if (!environment.production) {
+        if (environment.enableProxy) {
             return this.req.request(`/assets/${userId}.response.json`, {});
         }
         return this.req.request(`${environment.stravaApiProxy}/person/${userId}/activities`, {});

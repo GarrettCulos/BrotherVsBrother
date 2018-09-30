@@ -31,14 +31,16 @@ export class ActivityTimelineComponent implements OnInit, OnDestroy {
         const currentDate = new Date().getTime();
 
         this.store.pipe(select(getActivitiesForUser(person.id))).subscribe((activities: any) => {
-            let activityFeedHeight = 0;
-            person.activities = activities.map(activity => {
-                activity.start_date = new Date(activity.start_date);
-                activity.windowPosition = (currentDate - activity.start_date.getTime()) / secondsPerPixel;
-                activityFeedHeight = Math.max(activityFeedHeight, activity.windowPosition);
-                return activity;
-            });
-            this.activityFeedHeight = Math.max(activityFeedHeight, 0);
+            if (activities) {
+                let activityFeedHeight = 0;
+                person.activities = activities.map(activity => {
+                    activity.start_date = new Date(activity.start_date);
+                    activity.windowPosition = (currentDate - activity.start_date.getTime()) / secondsPerPixel;
+                    activityFeedHeight = Math.max(activityFeedHeight, activity.windowPosition);
+                    return activity;
+                });
+                this.activityFeedHeight = Math.max(this.activityFeedHeight, activityFeedHeight + 40, 0);
+            }
         });
     }
 

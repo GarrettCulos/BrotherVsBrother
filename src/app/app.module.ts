@@ -29,9 +29,10 @@ import { SubHeaderComponent } from './components/sub-header/sub-header.component
 import { ActivityComponent } from './components/activity/activity.component';
 import { ActivityTimelineComponent } from './components/activity-timeline/activity-timeline.component';
 import { ActivityHeaderComponent } from './components/activity-header/activity-header.component';
+import { DonateComponent } from './components/donate/donate.component';
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, FooterComponent, SubHeaderComponent, ActivityComponent, ActivityTimelineComponent, ActivityHeaderComponent],
+    declarations: [AppComponent, HeaderComponent, FooterComponent, SubHeaderComponent, ActivityComponent, ActivityTimelineComponent, ActivityHeaderComponent, DonateComponent],
     imports: [
         BrowserModule,
         ServiceWorkerModule,

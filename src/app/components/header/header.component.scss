@@ -15,17 +15,29 @@
     padding-bottom: 1.5rem;
 
     & .title {
+        font-family: 'Mr De Haviland', cursive;
         display: block;
         margin: 0;
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
+        font-size: 3.5rem;
+        font-weight: 200;
     }
 
     & .description {
         display: block;
         margin: 0;
-
+        margin-top: -10px;
         font-weight: 300;
     }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.story,
+.story-tldr {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 300;
 }

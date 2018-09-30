@@ -1,22 +1,25 @@
 {
     "index": "/index.html",
     "assetGroups": [
-      {
-        "name": "brotherVsBrother",
-        "installMode": "prefetch",
-        "resources": {
-          "versionedFiles": ["/*.bundle.css", "/*.bundle.js", "/*.chunk.js"],
-          "urls": ["https://fonts.googleapis.com/icon?family=Material+Icons"]
+        {
+            "name": "brotherVsBrother",
+            "installMode": "prefetch",
+            "resources": {
+                "versionedFiles": ["/*.bundle.css", "/*.bundle.js", "/*.chunk.js"],
+                "urls": [
+                    "https://fonts.googleapis.com/icon?family=Material+Icons",
+                    "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
+                    "https://fonts.googleapis.com/css?family=Mr+De+Haviland"
+                ]
+            }
+        },
+        {
+            "name": "assets",
+            "installMode": "lazy",
+            "updateMode": "lazy",
+            "resources": {
+                "files": ["/assets/**/*"]
+            }
         }
-      },
-      {
-        "name": "assets",
-        "installMode": "lazy",
-        "updateMode": "lazy",
-        "resources": {
-          "files": ["/assets/**/*"]
-        }
-      }
     ]
-  }
-  
+}

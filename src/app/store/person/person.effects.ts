@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { Actions, Effect, ofType } from '@ngrx/effects';
-import { catchError, switchMap, mergeMap } from 'rxjs/operators';
+import { catchError, mergeMap } from 'rxjs/operators';
 
 import * as UIActions from '../ui/ui.actions';
 import * as PersonActions from './person.actions';
@@ -18,7 +18,7 @@ export class PersonEffects {
     getActions$: Observable<Action> = this.actions$.pipe(
         ofType(PersonActions.ADD_PERSON),
         mergeMap((action: PersonActions.AddPerson) =>
-            this.stravaService.getActivities(action.person.name).pipe(
+            this.stravaService.getActivities(action.person.id).pipe(
                 mergeMap(activities => of(new ActivitiesActions.AddActivities(activities.body))),
                 catchError(error => of(new UIActions.AddError(ActivitiesActions.ADD_ACTIVITIES, error)))
             )
